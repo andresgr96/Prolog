@@ -1,6 +1,0 @@
-subtract(Y, 0, Y) .
-subtract(succ(X), succ(Y), Z):- subtract(X, Y, Z).
-
-
-
-
