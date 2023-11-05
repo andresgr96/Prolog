@@ -1,0 +1,8 @@
+sum([], 0).
+sum([H|T], Sum):- sumAcc(T, H, H, Sum).
+
+sumAcc([],Min, Max, Sum):- Sum is Min + Max.
+sumAcc([H|T],Min, Max, Sum):- H > Max, sumAcc(T, Min, H, Sum).
+sumAcc([H|T],Min, Max, Sum):- H < Min, sumAcc(T, H, Max, Sum).
+
+
